@@ -3,21 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to HRX Beginners Track!</title>
+    <title></title>
     <link href="style.css" rel="stylesheet"/>
     <script src="https://unpkg.com/vue"></script>
 </head>
+<style>
+    body {font-family: "Times New Roman", Georgia, Serif;}
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
+    
+    .w3-tooltip,.w3-display-container {
+        position: relative
+    }
+    
+    .w3-padding-32 {
+        padding-top: 32px!important;
+        padding-bottom: 32px!important
+    }
+    
+    .w3-wide {
+        letter-spacing: 4px
+    }
+    
+    .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover {
+        color: #000!important;
+        background-color: #f1f1f1!important
+    }
+    
+    .w3-content,.w3-auto {
+        margin-left: auto;
+        margin-right: auto
+    }
+    
+    
+    .w3-image {
+        max-width: 100%;
+        height: auto
+    }
+    
+    .w3-center .w3-bar {
+        display: inline-block;
+        width: auto
+    }
+    
+    header {
+        display: block
+    }
+    
+    .w3-display-bottomleft {
+        position: absolute;
+        left: 0;
+        bottom: 0
+    }
+    
+    .w3-padding-large {
+        padding: 12px 24px!important
+    }
+    
+    .w3-opacity,.w3-hover-opacity:hover {
+        opacity: 0.60
+    }
+    
+    .w3-xxlarge {
+        font-size: 36px!important
+    }
+    
+    .w3-text-green,.w3-hover-text-green:hover {
+        color: #4CAF50!important
+    }
+    </style>
 <body>
-    <div id="hrx_starter">
-        <h1>Welcome to HRX Beginners Track!</h1>
-
-        <h2>What is your name?</h2>
-
-        <input v-model="username" type="text">
-        <button v-on:click="greet">Greetings!</button>
-
-        <h2>{{ greeting }}</h2>
+    <!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+    <img class="w3-image" src="https://www.pngitem.com/pimgs/m/514-5149315_watercolor-black-splatter-png-transparent-png.png" alt="Hamburger Catering" width="1000" height="600">
+    <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+      <h1 class="w3-xxlarge">SOCIAL JUSTICE</h1>
     </div>
+  </header>
+    <div id="opening_title">
+        <h1>[Website Name]</h1>
+        <br>
+        <h3>
+            Welcome to [Website Name]! This website is for people who aren't sure 
+            about where to start with supporting social justice organizations and
+            charities.
+        </h3>
+        <br>
+        <h3>
+            
+        </h3>
+
+    </div>
+    <div id="quiz">
+        
+
+
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
