@@ -7,25 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300">
     <link href="style.css" rel="stylesheet"/>
     <script src="https://unpkg.com/vue"></script>
-</head>
-    <!-- Navbar -->
-<header>
-    <div class="container">
-        
-        <img src="https://i.imgur.com/1bNCnoM.png"alt="logo" class="logo">
-
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Race</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">LGBTQ+</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Mental Health</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </head>
+    <!-- Navbar (Moved down, under style code now) -->
 
 <style>
 
@@ -58,6 +41,18 @@
         padding: 10px 0;
     }
 
+    #submit {
+        font-family: sans-serif;
+	    font-size: 20px;
+	    background-color: rgb(254, 255, 255);
+	    color: rgb(0, 0, 0);
+	    border: 0px;
+	    border-radius: 3px;
+	    padding: 15px;
+	    cursor: pointer;
+	    margin-bottom: 20px;
+        
+    }
     nav {
         float:right;
     }
@@ -149,9 +144,32 @@
         height: auto;
         text-align: center;
     }
+
+    .submit{
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
 </style>
 <body style="background-color:darkslategrey">
-    <!-- Header -->
+    <!-- Header Navbar -->
+    <header>
+        <div class="container">
+            
+            <img src="https://i.imgur.com/1bNCnoM.png"alt="logo" class="logo">
+    
+            <nav>
+                <ul>
+                    <li><a href="#">Race</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">LGBTQ+</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Mental Health</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 <header class="unsplash-homepage" id="home">
     <!--Images to scroll through on startup of website-->
     <img class="unsplash-image" src="https://images.unsplash.com/photo-1592458752545-8abc3c97c23f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" 
@@ -160,14 +178,15 @@
     alt="A protest, with a man holding a sign saying Justice Now">
     <img class="unsplash-image" src="https://images.unsplash.com/photo-1564663546430-46192ce6be42?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=michelle-ding-LXUR8IWa0i0-unsplash.jpg" 
     alt="A women's right protest, with a sign that says We will Not Be Silenced">
-
     <!--Sticky title text, scrolling throughout the images and stopping-->
-    <div class="unsplash-display-centered large-image-padding">
+    <br>
+    <br>
+    <br>
+    <div class="unsplash-display-centered">
       <h1 class ="header-title"><strong>SOCIAL JUSTICE.</strong></h1>
     </div>
-  </header>
+</header>
     <div id="opening_title">
-        <br>
         <h2>
             Welcome! This website is for people who aren't sure 
             about where to start with supporting social justice organizations and
@@ -175,11 +194,11 @@
         </h2>
         <br>
     </div>
-    
+
     <!-- This is the quiz. Most of the HTML will be contained in Javascript-->
     <div id="quiz"></div>
-    <button id="submit">Submit Quiz</button>
-    <script src="app.js"></script>
+    <button class="logo submit" id="submit">Submit Quiz</button>
+    <script src="quiz_functions.js"></script>
     <p></p>
 </body>
 </html>
