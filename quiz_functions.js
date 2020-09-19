@@ -1,5 +1,8 @@
 var womensRights = 0;
-var 
+var race = 0
+var lgbtq = 0
+var education = 0
+var mentalHealth = 0
 
 // Pulling general ideas from https://www.sitepoint.com/simple-javascript-quiz/
 const startButton = document.getElementById('start');
@@ -10,16 +13,58 @@ const submitButton = document.getElementById('submit');
 startButton.addEventListener('click', buildQuiz)
 
 const myQuestions = [
-    //copy the following section for each question
+    //copy the following section for each question//
     {
-        question: "Question 1",
+        question: "What gender do you identify as?",
         answers: {
-            a: "option a",
-            b: "option b",
-            c: "option c"
+            a: "Male",
+            b: "Female",
+            c: "Other"
+        },
+        //we need to change this, because there isn't any correct answer!
+        correctAnswers: "a"
+    },
+    {    
+        question: "Do you come from an area with poor educational funds/resources?",
+        answers: {
+            a: "Yes",
+            b: "No",
         },
         correctAnswers: "a"
-    }//,
+    },
+    {    
+        question: "Do you, or someone you know, have a mental illness?",
+        answers: {
+            a: "Yes",
+            b: "No",
+        },
+        correctAnswers: "a"
+    },
+    {    
+        question: "Do you identify as a BIPOC? (Black, Indigenous, People of Color)",
+        answers: {
+            a: "Yes",
+            b: "No",
+        },
+        correctAnswers: "a"
+    },
+    {    
+        question: "What age group do you believe you belong in?",
+        answers: {
+            a: "Youth",
+            b: "Adult",
+            c: "Elderly",
+        },
+        correctAnswers: "a"
+    },
+    {    
+        question: "Would you like to be recommended to a random social justice group, or find one based off of your results?",
+        answers: {
+            a: "Random",
+            b: "Based off of my results",
+        },
+        correctAnswers: "a"
+    },
 ];
 
 function buildQuiz(){
