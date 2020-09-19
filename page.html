@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; 
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ .crop img {
+        width: 400px;
+        height: 300px;
+        margin: -75px 0 0 -100px;
+    }
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* captions */
+.text {
+  color: #f2f2f2;
+  font-size: 40px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family:"Courier New", Courier, monospace	
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+p {
+  border: 2px solid black;
+  padding: 20px;
+  font-size: 15px;
+}
+</style>
+</head>
+<body>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+   
+   <img src="https://lh3.googleusercontent.com/QPhagguheJYtWW3A4_TRIGjnTS3ejZ8c8yJe5tmTehOAOzsDlG7tnLyjm2nOSkACQ5ALqTI2GljU2k-ceRG45xplx3oqpcGUdK06SHPA8mEk-s3fZDyFPJ8f88hjm97cbBq5OOoKxg=w2400" style="width:100%" width="120" height="200">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://lh3.googleusercontent.com/tKEF0Sc4nT-cUPI7YsQKKsezGYfZtWB49RvMqXiWI9uiQ5ZbjxQMHth7jcnbjGufaX8IL4Kr6p7YzzVbtaz0n2KhU8Ep3wZoxdgUlCUDzPQr0_YnzWRHsbqHPKMFyPbgyuk3CF0FFQ=w2400" style="width:100%" width="120" height="200">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://lh3.googleusercontent.com/iEoAXKcQHGpbTkjgtvwlmS3Cron_fYONkO5lhPiTwwQZG6imnK33CHpth3ckCP4QAaKzahJJn8_ZEE7hQLhfV1hwBPpzrhI3vlS3Xnv502iVH2CKNiku38H5xE5TtE_WvktiOBCpxQ=w2400" style="width:100%" width="120" height="200">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<h2><img src="https://lh3.googleusercontent.com/iwxFD_z5IsmBsHdCxoM58cuAq18NEoFW2kN5g1cI94kqfQRV2aXP3fwFGqFHQ8YAhXB0rAhTNZkluHjHKqUbnQcURGAfsbpm7Ri9PpT2jLEb-aOvy-WvK4nqgTpNWAxPWgtTxmy1Ig=w2400" alt="resources" width="110" height="50">
+</h2>
+
+<p style="font-family:'OpenSans-Light; line-height:24px; font-weight:lighter;">Women's rights are the rights and entitlements claimed for women and girls worldwide, and they formed the basis for the women's rights movement in the 19th century and the feminist movement during the 20th century. In some countries, these rights are institutionalized or supported by law, local custom, and behavior, whereas in others, they are ignored and suppressed. They differ from broader notions of human rights through claims of an inherent historical and traditional bias against the exercise of rights by women and girls, in favor of men and boys.
+</p>
+
+<h2><img src="https://lh3.googleusercontent.com/rJOFNdTkXEQIgDUwUB50WUMBCmyS01mFkumtac4YMaTyAETaK2iFoFxmwnTsbwTw0g7xomRZIHnZyrowQN3tUrBR6HKNe54HOwD5vgfdNMCMEh_lyHat9B_ewTPPokFC3lPk-aDPeg=w2400" alt="resources" width="350" height="50">
+</h2>
+
+<div class="row">
+  <div class="column">    
+    <ul>
+        <li><a href="https://www.aclu.org/other/comprehensive-list-womens-rights-resources">ACLU</a></li>
+        <li>List item</li>
+        <li>List item</li>
+    </ul>
+    
+  </div>
+  <div class="column">
+    <p>Some text..</p>
+  </div>
+  <div class="column">
+    <p>Some text..</p>
+  </div>
+</div>
+
+
+
+</body>
+</html> 

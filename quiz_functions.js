@@ -13,7 +13,6 @@ const submitButton = document.getElementById('submit');
 startButton.addEventListener('click', buildQuiz)
 
 const myQuestions = [
-    //copy the following section for each question//
     {
         question: "What gender do you identify as?",
         answers: {
@@ -22,7 +21,8 @@ const myQuestions = [
             c: "Other"
         },
         //we need to change this, because there isn't any correct answer!
-        correctAnswers: "a"
+        womensRightsChoice: "b"
+        ,lgbtqChoice: "c"
     },
     {    
         question: "Do you come from an area with poor educational funds/resources?",
@@ -30,7 +30,7 @@ const myQuestions = [
             a: "Yes",
             b: "No",
         },
-        correctAnswers: "a"
+        educationChoice: "a"
     },
     {    
         question: "Do you, or someone you know, have a mental illness?",
@@ -38,7 +38,7 @@ const myQuestions = [
             a: "Yes",
             b: "No",
         },
-        correctAnswers: "a"
+        mentalHealthChoice: "a"
     },
     {    
         question: "Do you identify as a BIPOC? (Black, Indigenous, People of Color)",
@@ -46,7 +46,7 @@ const myQuestions = [
             a: "Yes",
             b: "No",
         },
-        correctAnswers: "a"
+        raceChoice: "a"
     },
     {    
         question: "What age group do you believe you belong in?",
@@ -55,7 +55,8 @@ const myQuestions = [
             b: "Adult",
             c: "Elderly",
         },
-        correctAnswers: "a"
+        educationChoice: "a"
+        ,mentalHealthChoice: "c"
     },
     {    
         question: "Would you like to be recommended to a random social justice group, or find one based off of your results?",
@@ -63,7 +64,7 @@ const myQuestions = [
             a: "Random",
             b: "Based off of my results",
         },
-        correctAnswers: "a"
+        raceChoice: "a"
     },
 ];
 
@@ -99,18 +100,52 @@ function buildQuiz(){
 
 function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
-    let numCorrect = 0;
     myQuestions.forEach( (currentQuestion, questionNumber) => {
+        current_highest_count = 0
         const answerContainer = answerContainers[questionNumber];
         const selector = `input[name=question${questionNumber}]:checked`;
         const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-        if(userAnswer === currentQuestion.correctAnswers){
-            numCorrect++;
-            answerContainers[questionNumber].getElementsByClassName.color = 'lightgreen';
+        if(userAnswer === currentQuestion.womensRightsChoice){
+            womensRights++;
+        }
+        else if(userAnswer === currentQuestion.raceChoice){
+            race++;
+        }
+        else if(userAnswer === currentQuestion.lgbtqChoice){
+            lgbtq++;
+        }
+        else if(userAnswer === currentQuestion.educationChoice){
+            education++;
+        }
+        else if(userAnswer === currentQuestion.mentalHealthChoice){
+            mentalHealth++;
+        }
+    });
+    var array_of_all_counts = [womensRights, race, lgbtq, education, mentalHealth];
+    var nothing_is_less_yet = True;
+    var current_highest_count;
+    for (let index = 0; index < array_of_all_counts.length; index++) {
+        const element = array[index];
+        if (nothing_is_less_yet){
+            current_highest_count = element;
+        }
+        else if (element > current_highest_count){
+            current_highest_count = element;
         }
         
-    });
-    resultsContainer.innerHTML = `${numCorrect}`;
+    }
+    //OK THE STUFF ABOVE IS WILD ASF LMAO BUT LIKE THIS IS THE PART WHERE WE
+    //DIRECT THE USER TO THE WEBPAGE OF THEIR PREFERENCE -alan
+    for (let index = 0; index < array_of_all_counts.length; index++) {
+        const element = array[index];
+        //if their preference is women's rights, direct the user to the specificed page
+
+        //if their preference is race, direct the user to the specificed page
+        //if their preference is lgbtq, direct the user to the specificed page
+        //if their preference is education, direct the user to the specificed page
+        //if their preference is mental health, direct the user to the specificed page
+    }
+    resultsContainer.innerHTML = `${current_highest_count}`;
 }
 
 submitButton.addEventListener('click', showResults);
