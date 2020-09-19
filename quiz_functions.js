@@ -139,7 +139,7 @@ function showResults(){
     for (let index = 0; index < array_of_all_counts.length; index++) {
         const element = array[index];
         //if their preference is women's rights, direct the user to the specificed page
-
+        
         //if their preference is race, direct the user to the specificed page
         //if their preference is lgbtq, direct the user to the specificed page
         //if their preference is education, direct the user to the specificed page
