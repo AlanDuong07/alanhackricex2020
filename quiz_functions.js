@@ -60,6 +60,31 @@ const myQuestions = [
         ,mentalHealthChoice: "c"
     },
     {    
+        question: "Have you ever seriously questioned that you had a mental health issue?",
+        answers: {
+            a: "Yes",
+            b: "No",
+        },
+        mentalhealthChoice: "a"
+    },
+    {    
+        question: "Do you believe each individual has the power in society to gain an education?",
+        answers: {
+            a: "Yes",
+            b: "No",
+        },
+        educationChoice: "a"
+    },
+    {    
+        question: "Prioritize improving public school's supplies/resources, or pay teachers (majority women) more?",
+        answers: {
+            a: "Public Schools",
+            b: "Pay teachers",
+        },
+        educationChoice: "a"
+        ,womensRightsChoice: "b"
+    },
+    {    
         question: "Would you like to be recommended to a random social justice group, or find one based off of your results?",
         answers: {
             a: "Random",
@@ -166,4 +191,3 @@ function showResults(){
 startButton.addEventListener('click', buildQuiz);
 
 submitButton.addEventListener('click', showResults);
-
