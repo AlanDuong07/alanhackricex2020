@@ -1,9 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Justice Quiz</title>
+
+  <!-- Favicon (Icon that appears in the browser tab, has to go under head)-->
+  <!-- Should work for FF, Chrome, etc. but maybe not IE -An -->
+  <link rel="icon" type="image/png" href="https://i.imgur.com/daQom4k.png"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300">
+  <!-- <link href="style.css" rel="stylesheet"/> -->
+  <script src="https://unpkg.com/vue"></script>
+  </head>
 
 <style>
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+/* Navbar */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+header {
+    background:darkslategrey;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+header::after {
+    content:'';
+    display: table;
+    clear: both;
+}
+
+.logo{
+    width: 85px;
+    height: 71px;
+    margin: 0 auto;
+    float: left;
+    padding: 10px 0;
+}
+
+#submit {
+    font-family: sans-serif;
+	  font-size: 20px;
+	  background-color: rgb(254, 255, 255);
+	  color: rgb(0, 0, 0);
+	  border: 0px;
+	  border-radius: 3px;
+	  padding: 15px;
+	  cursor: pointer;
+	  margin-bottom: 20px;
+        
+    }
+
+nav {
+    float:right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0px;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 69px;
+    padding-top: 24px;
+
+    position: relative;
+}
+
+nav ul > li > a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #a0a0a0;
+
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 4px;
+    top: 0;
+    width: 0%;
+    background-color: #ffffff;
+  
+    position:absolute;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
 
 * {
   box-sizing: border-box;
@@ -149,7 +249,24 @@ footer{
 </style>
 </head>
 <body>
-
+    <!-- Navbar -->
+    <header>
+      <div class="container">
+          <a href="../homepage.html">
+          <img src="https://i.imgur.com/1bNCnoM.png" alt="home" class="logo"/> </a>
+          
+          <nav>
+              <ul>
+                  <li><a href="race.html">Race</a></li>
+                  <li><a href="womensrights.html">Women</a></li>
+                  <li><a href="lgbtq.html">LGBTQ+</a></li>
+                  <li><a href="education.html">Education</a></li>
+                  <li><a href="mentalhealth.html">Mental Health</a></li>
+                  <li><a href="other.html">Other</a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
 
 <div class="slideshow-container">
 

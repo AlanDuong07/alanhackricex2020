@@ -17,90 +17,93 @@
 <style>
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
 
+/* Navbar */
 .container {
-        width: 85%;
-        margin: 0 auto;
-    }
+    width: 85%;
+    margin: 0 auto;
+}
 
-    header {
-        background:darkslategrey;
-        margin: 0;
-        font-family: 'Work Sans', sans-serif;
-        font-weight: 300;
-    }
+header {
+    background:darkslategrey;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
 
-    header::after {
-        content:'';
-        display: table;
-        clear: both;
-    }
+header::after {
+    content:'';
+    display: table;
+    clear: both;
+}
 
-    .logo{
-        max-width:100%;
-        max-height:100%;
-        float: left;
-        padding: 10px 0;
-    }
+.logo{
+    width: 85px;
+    height: 71px;
+    margin: 0 auto;
+    float: left;
+    padding: 10px 0;
+}
 
-    #submit {
-        font-family: sans-serif;
-	    font-size: 20px;
-	    background-color: rgb(254, 255, 255);
-	    color: rgb(0, 0, 0);
-	    border: 0px;
-	    border-radius: 3px;
-	    padding: 15px;
-	    cursor: pointer;
-	    margin-bottom: 20px;
+#submit {
+    font-family: sans-serif;
+	  font-size: 20px;
+	  background-color: rgb(254, 255, 255);
+	  color: rgb(0, 0, 0);
+	  border: 0px;
+	  border-radius: 3px;
+	  padding: 15px;
+	  cursor: pointer;
+	  margin-bottom: 20px;
         
     }
 
-    nav {
-        float:right;
-    }
+nav {
+    float:right;
+}
 
-    nav ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0px;
+}
 
-    nav li {
-        display: inline-block;
-        margin-left: 70px;
-        padding-top: 25px;
+nav li {
+    display: inline-block;
+    margin-left: 69px;
+    padding-top: 24px;
 
-        position: relative;
-    }
+    position: relative;
+}
 
-    nav ul > li > a {
-        color: #ffffff;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 15px;
-    }
+nav ul > li > a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
 
-    nav a:hover {
-        color: #a0a0a0;
+nav a:hover {
+    color: #a0a0a0;
 
-    }
+}
 
-    nav a::before {
-        content: '';
-        display: block;
-        height: 4px;
-        top: 0;
-        width: 0%;
-        background-color: #ffffff;
-        
-        position:absolute;
+nav a::before {
+    content: '';
+    display: block;
+    height: 4px;
+    top: 0;
+    width: 0%;
+    background-color: #ffffff;
+  
+    position:absolute;
 
-        transition: all ease-in-out 250ms;
-    }
+    transition: all ease-in-out 250ms;
+}
 
-    nav a:hover::before {
-        width: 100%;
-    }
+nav a:hover::before {
+    width: 100%;
+}
 
 * {
   box-sizing: border-box;
@@ -246,7 +249,7 @@ footer{
 </style>
 </head>
 <body>
-    <!-- Header Navbar -->
+    <!-- Navbar -->
     <header>
       <div class="container">
           <a href="../homepage.html">
@@ -263,7 +266,7 @@ footer{
               </ul>
           </nav>
       </div>
-  </header>
+    </header>
 
 <div class="slideshow-container">
 
@@ -327,26 +330,26 @@ function showSlides(n) {
 <div class="row">
   <div class="column">    
     <ul>
-        <h2 style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;">RESOURCES</h2>
-        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;"><a href="https://www.aclu.org/other/comprehensive-list-womens-rights-resources">AMERICAN CIVIL LIBERTIES UNION</a></li>
-        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;"><a href="https://www.hrw.org/topic/womens-rights">HUMAN RIGHTS WATCH</a></li>
-        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;"><a href="https://www.globalfundforwomen.org/announcing-new-strategic-plan-latanya-letter/?utm_medium=Website&utm_source=Homepage&utm_campaign=strategic-plan">GLOBAL FUND FOR WOMEN</a></li>
+        <h2 style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center">RESOURCES</h2>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://www.aclu.org/other/comprehensive-list-womens-rights-resources">AMERICAN CIVIL LIBERTIES UNION</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://www.hrw.org/topic/womens-rights">HUMAN RIGHTS WATCH</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://www.globalfundforwomen.org/announcing-new-strategic-plan-latanya-letter/?utm_medium=Website&utm_source=Homepage&utm_campaign=strategic-plan">GLOBAL FUND FOR WOMEN</a></li>
     </ul>
   </div>
   <div class="column">
     <ul>
-        <h2 style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;">DONATE</h2>
-        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;"><a href="https://my.care.org/site/Donation2?df_id=29147&mfc_pref=T&29147.donation=form1&_ga=2.113519044.2121996566.1600560093-537919454.1600560093">CARE.ORG WOMEN EMPOWERMENT</a></li>
-        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;"><a href="https://salsa.wiredforchange.com/o/5996/p/salsa/donation/common/public/?donate_page_KEY=11132&track=A20X69XXXXXX">NATIONAL ORGANIZATION FOR WOMEN</a></li>
-        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;"><a href="https://www.heifer.org/give/one-time.html">HEIFER INTERNATIONAL</a></li> 
+        <h2 style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center">DONATE</h2>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://my.care.org/site/Donation2?df_id=29147&mfc_pref=T&29147.donation=form1&_ga=2.113519044.2121996566.1600560093-537919454.1600560093">CARE.ORG WOMEN EMPOWERMENT</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://salsa.wiredforchange.com/o/5996/p/salsa/donation/common/public/?donate_page_KEY=11132&track=A20X69XXXXXX">NATIONAL ORGANIZATION FOR WOMEN</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://www.heifer.org/give/one-time.html">HEIFER INTERNATIONAL</a></li> 
     </ul>
   </div>
   <div class="column">
     <ul>
-        <h2 style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;">SOCIAL MEDIA</h2>
-        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;"><a href="https://www.instagram.com/womensmarch/">@WOMENSMARCH</a></li>
-        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;"><a href="https://www.instagram.com/timesupnow/">@TIMESUPNOW</a></li>
-        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;"><a href="https://www.instagram.com/gurlstalk/">@GURLSTALK</a></li>
+        <h2 style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center">SOCIAL MEDIA</h2>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://www.instagram.com/womensmarch/">@WOMENSMARCH</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://www.instagram.com/timesupnow/">@TIMESUPNOW</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://www.instagram.com/gurlstalk/">@GURLSTALK</a></li>
     </ul>
   </div>
 </div>

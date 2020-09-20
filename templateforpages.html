@@ -1,15 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Justice Quiz</title>
+
+  <!-- Favicon (Icon that appears in the browser tab, has to go under head)-->
+  <!-- Should work for FF, Chrome, etc. but maybe not IE -An -->
+  <link rel="icon" type="image/png" href="https://i.imgur.com/daQom4k.png"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300">
+  <!-- <link href="style.css" rel="stylesheet"/> -->
+  <script src="https://unpkg.com/vue"></script>
+  </head>
 
 <style>
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
 
+/* Navbar */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+header {
+    background:darkslategrey;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+header::after {
+    content:'';
+    display: table;
+    clear: both;
+}
+
+.logo{
+    width: 85px;
+    height: 71px;
+    margin: 0 auto;
+    float: left;
+    padding: 10px 0;
+}
+
+#submit {
+    font-family: sans-serif;
+	  font-size: 20px;
+	  background-color: rgb(254, 255, 255);
+	  color: rgb(0, 0, 0);
+	  border: 0px;
+	  border-radius: 3px;
+	  padding: 15px;
+	  cursor: pointer;
+	  margin-bottom: 20px;
+        
+    }
+
+nav {
+    float:right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0px;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 69px;
+    padding-top: 24px;
+
+    position: relative;
+}
+
+nav ul > li > a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #a0a0a0;
+
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 4px;
+    top: 0;
+    width: 0%;
+    background-color: #ffffff;
+  
+    position:absolute;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
 
 * {
   box-sizing: border-box;
 }
 
-/* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 33.33%;
@@ -34,7 +133,6 @@ body {font-family: Verdana, sans-serif; margin:0}
 img {vertical-align: middle;}
 
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
   margin: auto;
 }
@@ -51,6 +149,11 @@ img {vertical-align: middle;}
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(sansation_light.woff);
 }
 
 .next {
@@ -97,30 +200,87 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 
+.bg {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 p {
+  border: 3px solid black;
+  padding: 30px;
+  font-size: 20px;
+  margin-top: 100px;
+  margin-bottom: 75px;
+  margin-right: 150px;
+  margin-left: 150px;
+}
+
+ul {
   border: 2px solid black;
   padding: 20px;
-  font-size: 15px;
+  font-size: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 200px;
+}
+
+footer{
+    padding: 100px;
+    text-align:center;
+    color:black;
+    display:block;
 }
 </style>
 </head>
 <body>
-
+    <!-- Navbar -->
+    <header>
+      <div class="container">
+          <a href="../homepage.html">
+          <img src="https://i.imgur.com/1bNCnoM.png" alt="home" class="logo"/> </a>
+          
+          <nav>
+              <ul>
+                  <li><a href="race.html">Race</a></li>
+                  <li><a href="womensrights.html">Women</a></li>
+                  <li><a href="lgbtq.html">LGBTQ+</a></li>
+                  <li><a href="education.html">Education</a></li>
+                  <li><a href="mentalhealth.html">Mental Health</a></li>
+                  <li><a href="other.html">Other</a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
 
 <div class="slideshow-container">
 
 <div class="mySlides fade">
    
-   <img src="https://lh3.googleusercontent.com/QPhagguheJYtWW3A4_TRIGjnTS3ejZ8c8yJe5tmTehOAOzsDlG7tnLyjm2nOSkACQ5ALqTI2GljU2k-ceRG45xplx3oqpcGUdK06SHPA8mEk-s3fZDyFPJ8f88hjm97cbBq5OOoKxg=w2400" style="width:100%" width="120" height="200">
+   <img src="https://lh3.googleusercontent.com/inftk_nW69RouHprSGT75D8W3cV3lkzjbjJTyFiSNG04EFX3AqmJ7vQTMszE7V1Jjzpz9SEGq0bWhCX4FBugeeRs0cDOQXZi6mpwOcLUOIWI59RsYOEkdSElKXOoTiwQPDasZucx4Q=w2400" class="bg">
 </div>
 
 <div class="mySlides fade">
-  <img src="https://lh3.googleusercontent.com/tKEF0Sc4nT-cUPI7YsQKKsezGYfZtWB49RvMqXiWI9uiQ5ZbjxQMHth7jcnbjGufaX8IL4Kr6p7YzzVbtaz0n2KhU8Ep3wZoxdgUlCUDzPQr0_YnzWRHsbqHPKMFyPbgyuk3CF0FFQ=w2400" style="width:100%" width="120" height="200">
+  <img src="https://lh3.googleusercontent.com/1GuZWlpTRUQbDoujL-pIlFjyyvUopca7_kv2huci-Dzmbjfg_mdSJ-29igegWzFEymsuhT7XgJ3KBPDP9d-hoDHfcffJe20Ke6Gx7_Z9r1xjH9HJX8n4gVH647DopmfNagFSmmPjMQ=w2400" class="bg">
 </div>
 
 <div class="mySlides fade">
-  <img src="https://lh3.googleusercontent.com/iEoAXKcQHGpbTkjgtvwlmS3Cron_fYONkO5lhPiTwwQZG6imnK33CHpth3ckCP4QAaKzahJJn8_ZEE7hQLhfV1hwBPpzrhI3vlS3Xnv502iVH2CKNiku38H5xE5TtE_WvktiOBCpxQ=w2400" style="width:100%" width="120" height="200">
+  <img src="https://lh3.googleusercontent.com/_fz5_FrRoTJ_TxwfHFMQLvJv8WyWvIkE0vN1EI8j0WP9U7JMvtd8yhaysnOlOs7UEN-rphgl5sinpOkMnP3KT-k6TuwGgr4ph2W_zePIKCrj44jgZevI72s95QTScHtjA_JZKLCbXg=w2400" class="bg">
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -146,7 +306,6 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -159,34 +318,48 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+<img src="https://lh3.googleusercontent.com/nDyRrJL24JLxND_-QhsC2S0_DflcT9DkXDf0dxOePXCzYugXxwjeoHqzYHDB_XW4jwmJu8Xs6wn7zSwZk3T-DSVP5OrPbuD5Y-GGUZZ5DiG_Yckd_4gE1X3MRejTaGlMII8hQa8D_Q=w2400" alt="resources">
 
-<h2><img src="https://lh3.googleusercontent.com/iwxFD_z5IsmBsHdCxoM58cuAq18NEoFW2kN5g1cI94kqfQRV2aXP3fwFGqFHQ8YAhXB0rAhTNZkluHjHKqUbnQcURGAfsbpm7Ri9PpT2jLEb-aOvy-WvK4nqgTpNWAxPWgtTxmy1Ig=w2400" alt="resources" width="110" height="50">
-</h2>
-
-<p style="font-family:'OpenSans-Light; line-height:24px; font-weight:lighter;">Women's rights are the rights and entitlements claimed for women and girls worldwide, and they formed the basis for the women's rights movement in the 19th century and the feminist movement during the 20th century. In some countries, these rights are institutionalized or supported by law, local custom, and behavior, whereas in others, they are ignored and suppressed. They differ from broader notions of human rights through claims of an inherent historical and traditional bias against the exercise of rights by women and girls, in favor of men and boys.
+<p style="font-family:OpenSans-Light; line-height:24px; font-weight:lighter;"> 
+    Racial discrimination is any discrimination against individuals on the basis of their skin color, or racial or ethnic origin. Individuals can discriminate by refusing to do business with, socialize with, or share resources with people of a certain group. Governments can discriminate in a de facto fashion or explicitly in law, for example through policies of racial segregation, disparate enforcement of laws, or disproportionate allocation of resources. Some jurisdictions have anti-discrimination laws which prohibit the government or individuals from discriminating based on race (and sometimes other factors) in various circumstances. Some institutions and laws use affirmative action to attempt to overcome or compensate for the effects of racial discrimination. In some cases, this is simply enhanced recruitment of members of underrepresented groups; in other cases, there are firm racial quotas. Opponents of strong remedies like quotas characterize them as reverse discrimination, where members of a dominant or majority group are discriminated against.
 </p>
 
-<h2><img src="https://lh3.googleusercontent.com/rJOFNdTkXEQIgDUwUB50WUMBCmyS01mFkumtac4YMaTyAETaK2iFoFxmwnTsbwTw0g7xomRZIHnZyrowQN3tUrBR6HKNe54HOwD5vgfdNMCMEh_lyHat9B_ewTPPokFC3lPk-aDPeg=w2400" alt="resources" width="350" height="50">
-</h2>
+<a href="https://en.wikipedia.org/wiki/Racial_discrimination" class="button">Learn More</a>
+
+<img src="https://lh3.googleusercontent.com/-mhkeJusvjOVodaFPV9w98IV7tzEUb4cTx5G_EQtXtuVC-pIs5MvqeTDxY8m89jZcYL4zyjPz371tJJ5g65d5o2t5K5fdZwhgpWgeOpiinmeQ0zPJg-Q2CFrROx3E9Lhc5YGOGHqHw=w2400" alt="resources">
+
 
 <div class="row">
   <div class="column">    
     <ul>
-        <li><a href="https://www.aclu.org/other/comprehensive-list-womens-rights-resources">ACLU</a></li>
-        <li>List item</li>
-        <li>List item</li>
+        <h2 style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter; text-align:center">RESOURCES</h2>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://blacklivesmatter.com">BLACK LIVES MATTER</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://hispanicfederation.org/">HISPANIC FEDERATION</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://www.eeoc.gov/fact-sheet/facts-about-racecolor-discrimination">EEOC</a></li>
     </ul>
-    
   </div>
   <div class="column">
-    <p>Some text..</p>
+    <ul>
+        <h2 style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center">DONATE</h2>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://advancementproject.org/home/">ADVANCEMENT PROJECT</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://eji.org/">EJI</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://dreamdefenders.org/">DREAM DEFENDERS</a></li> 
+    </ul>
   </div>
   <div class="column">
-    <p>Some text..</p>
+    <ul>
+        <h2 style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center">SOCIAL MEDIA</h2>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://www.instagram.com/blklivesmatter/">@BLKLIVESMATTER</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://twitter.com/hashtag/blacklivesmatter">#BLACKLIVESMATTER</a></li>
+        <li style="font-family:OpenSans-Light; line-height:50px; font-weight:lighter;text-align:center"><a href="https://twitter.com/HispanicFed">@HISPANICFED</a></li>
+    </ul>
   </div>
 </div>
 
 
+<footer>
+<h3>social justice</h3>
+</footer>
 
 </body>
-</html>
+</html>  
